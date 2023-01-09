@@ -44,6 +44,7 @@
             this.EditButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
@@ -146,7 +147,7 @@
             this.ToBeSearched.Location = new System.Drawing.Point(127, 223);
             this.ToBeSearched.Name = "ToBeSearched";
             this.ToBeSearched.PlaceholderText = "Phone number";
-            this.ToBeSearched.Size = new System.Drawing.Size(383, 23);
+            this.ToBeSearched.Size = new System.Drawing.Size(306, 23);
             this.ToBeSearched.TabIndex = 3;
             // 
             // NewButton
@@ -164,6 +165,7 @@
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(15, 256);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 29;
@@ -202,11 +204,22 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // SearchButton
+            // 
+            this.SearchButton.Location = new System.Drawing.Point(458, 223);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchButton.TabIndex = 11;
+            this.SearchButton.Text = "Search";
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 450);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.EditButton);
@@ -249,5 +262,6 @@
         private Button EditButton;
         private Button CancelButton;
         private Button SaveButton;
+        private Button SearchButton;
     }
 }
